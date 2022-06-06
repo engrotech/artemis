@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+hypothesis
+schemathesis
+configparser
+requests
+pytest
+pytest-parallel

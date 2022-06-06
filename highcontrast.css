@@ -1,0 +1,11 @@
+body{
+    color: #000000;
+}
+
+#results-table{
+    color: #000000;
+}
+
+.expander::after{
+    color: #000000;
+}
