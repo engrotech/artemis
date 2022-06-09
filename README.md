@@ -106,9 +106,9 @@ Use the config.conf file to add your BASE_URL (Swagger Document), ENDPOINT (To s
 
 ## Further Project Plans:
 
-- [  ] Chained APIs Testing 
-- [  ] Authentication
-- [  ] Scenario Based Testing
+- [ ] Chained APIs Testing 
+- [ ] Authentication
+- [ ] Scenario Based Testing
 
 
 
