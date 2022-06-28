@@ -1,0 +1,11 @@
+schema-testing-neg.py::custom_test1[GET /items/{item_id}][N]:
+
+  - during reuse phase (0.08 seconds):
+    - Typical runtimes: 6-15 ms, ~ 96% in data generation
+    - 0 passing examples, 0 failing examples, 7 invalid examples
+
+  - during generate phase (19.28 seconds):
+    - Typical runtimes: 4-40 ms, ~ 95% in data generation
+    - 0 passing examples, 0 failing examples, 993 invalid examples
+
+  - Stopped because settings.max_examples=100, but < 10% of examples satisfied assumptions

@@ -1,0 +1,19 @@
+schema-testing-neg.py::custom_test1[GET /people][N]:
+
+  - during reuse phase (0.29 seconds):
+    - Typical runtimes: 16-38 ms, ~ 55% in data generation
+    - 9 passing examples, 0 failing examples, 1 invalid examples
+
+  - during generate phase (8.87 seconds):
+    - Typical runtimes: 20-71 ms, ~ 80% in data generation
+    - 91 passing examples, 0 failing examples, 71 invalid examples
+    - Events:
+      * 16.05%, Retried draw from text().filter(not_yet_in_unique_list) to satisfy filter
+      * 2.47%, Aborted test because unable to satisfy text().filter(lambda v: not validator(v))
+      * 2.47%, Retried draw from text().filter(lambda v: not validator(v)) to satisfy filter
+      * 1.23%, Aborted test because unable to satisfy just('lname').filter(lambda s: s not in out)
+      * 1.23%, Retried draw from sampled_from(['fname', 'lname', 'zname']).filter(lambda s: s not in out) to satisfy filter
+      * 0.62%, Aborted test because unable to satisfy sampled_from(['fname', 'lname', 'zname']).filter(lambda s: s not in out)
+      * 0.62%, Retried draw from <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a614ed160>.filter(lambda v: not validator(v)).filter(lambda v: <unknown>) to satisfy filter
+
+  - Stopped because settings.max_examples=100

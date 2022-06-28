@@ -1,0 +1,28 @@
+schema-testing-neg.py::custom_test1[GET /][N]:
+
+  - during reuse phase (0.40 seconds):
+    - Typical runtimes: 25-68 ms, ~ 70% in data generation
+    - 10 passing examples, 0 failing examples, 0 invalid examples
+
+  - during generate phase (9.13 seconds):
+    - Typical runtimes: 7-87 ms, ~ 86% in data generation
+    - 90 passing examples, 0 failing examples, 90 invalid examples
+    - Events:
+      * 10.56%, Aborted test because unable to satisfy just('msg').filter(lambda s: s not in out)
+      * 4.44%, Retried draw from text().filter(lambda s: s not in out) to satisfy filter
+      * 1.67%, Retried draw from text().filter(not_yet_in_unique_list) to satisfy filter
+      * 0.56%, Aborted test because unable to satisfy <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a61694970>.filter(lambda v: not validator(v)).filter(lambda v: <unknown>)
+      * 0.56%, Aborted test because unable to satisfy <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a616ad340>.filter(lambda v: not validator(v)).filter(lambda v: <unknown>)
+      * 0.56%, Retried draw from <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a60fdfcd0>.filter(lambda v: <unknown>) to satisfy filter
+      * 0.56%, Retried draw from <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a612c7400>.filter(lambda v: not validator(v)).filter(lambda v: <unknown>) to satisfy filter
+      * 0.56%, Retried draw from <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a61372a90>.filter(lambda v: not validator(v)).filter(lambda v: <unknown>) to satisfy filter
+      * 0.56%, Retried draw from <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a614dcb20>.filter(lambda v: not validator(v)).filter(lambda v: <unknown>) to satisfy filter
+      * 0.56%, Retried draw from <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a614ef4c0>.filter(lambda v: <unknown>) to satisfy filter
+      * 0.56%, Retried draw from <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a6150a0d0>.filter(lambda v: not validator(v)).filter(lambda v: <unknown>) to satisfy filter
+      * 0.56%, Retried draw from <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a615248e0>.filter(lambda v: not validator(v)).filter(lambda v: <unknown>) to satisfy filter
+      * 0.56%, Retried draw from <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a61529a90>.filter(lambda v: not validator(v)).filter(lambda v: <unknown>) to satisfy filter
+      * 0.56%, Retried draw from <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a6154b6a0>.filter(lambda v: not validator(v)).filter(lambda v: <unknown>) to satisfy filter
+      * 0.56%, Retried draw from <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a61694970>.filter(lambda v: not validator(v)).filter(lambda v: <unknown>) to satisfy filter
+      * 0.56%, Retried draw from <hypothesis.strategies._internal.core.CompositeStrategy object at 0x7f9a616ad340>.filter(lambda v: not validator(v)).filter(lambda v: <unknown>) to satisfy filter
+
+  - Stopped because settings.max_examples=100

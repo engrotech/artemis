@@ -1,0 +1,15 @@
+schema-testing.py::custom_test1[POST /add][P]:
+
+  - during reuse phase (0.22 seconds):
+    - Typical runtimes: 2-36 ms, ~ 73% in data generation
+    - 6 passing examples, 0 failing examples, 4 invalid examples
+
+  - during generate phase (10.73 seconds):
+    - Typical runtimes: 16-102 ms, ~ 85% in data generation
+    - 94 passing examples, 0 failing examples, 77 invalid examples
+    - Events:
+      * 78.95%, Retried draw from text().filter(lambda s: s not in out) to satisfy filter
+      * 8.77%, Retried draw from text().filter(not_yet_in_unique_list) to satisfy filter
+      * 1.17%, Aborted test because unable to satisfy text().filter(lambda s: s not in out)
+
+  - Stopped because settings.max_examples=100

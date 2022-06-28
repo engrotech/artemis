@@ -1,0 +1,13 @@
+schema-testing.py::custom_test1[GET /items/{item_id}][P]:
+
+  - during reuse phase (0.18 seconds):
+    - Typical runtimes: 14-45 ms, ~ 29% in data generation
+    - 8 passing examples, 0 failing examples, 0 invalid examples
+
+  - during generate phase (2.59 seconds):
+    - Typical runtimes: 9-29 ms, ~ 54% in data generation
+    - 92 passing examples, 0 failing examples, 28 invalid examples
+    - Events:
+      * 5.00%, Retried draw from text().filter(not_yet_in_unique_list) to satisfy filter
+
+  - Stopped because settings.max_examples=100

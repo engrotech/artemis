@@ -1,0 +1,19 @@
+schema-testing-neg.py::custom_test1[POST /add][N]:
+
+  - during reuse phase (0.35 seconds):
+    - Typical runtimes: 20-70 ms, ~ 58% in data generation
+    - 9 passing examples, 0 failing examples, 1 invalid examples
+
+  - during generate phase (6.94 seconds):
+    - Typical runtimes: 19-93 ms, ~ 72% in data generation
+    - 91 passing examples, 0 failing examples, 37 invalid examples
+    - Events:
+      * 6.25%, Retried draw from text().filter(not_yet_in_unique_list) to satisfy filter
+      * 4.69%, Aborted test because unable to satisfy text().filter(lambda v: not validator(v))
+      * 4.69%, Retried draw from text().filter(lambda v: not validator(v)) to satisfy filter
+      * 0.78%, Aborted test because unable to satisfy sampled_from(['fname', 'lname', 'zname']).filter(lambda s: s not in out)
+      * 0.78%, Aborted test because unable to satisfy sampled_from(['lname', 'zname']).filter(lambda s: s not in out)
+      * 0.78%, Retried draw from sampled_from(['fname', 'lname', 'zname']).filter(lambda s: s not in out) to satisfy filter
+      * 0.78%, Retried draw from sampled_from(['lname', 'zname']).filter(lambda s: s not in out) to satisfy filter
+
+  - Stopped because settings.max_examples=100

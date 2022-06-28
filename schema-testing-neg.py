@@ -1,18 +1,18 @@
 
 # from contextlib import suppress
-import os
+# import os
 # from dotenv import load_dotenv
 import schemathesis
-import json
-import requests
+# import json
+# import requests
 
-from unittest import TestCase
+# from unittest import TestCase
 
 from schemathesis import DataGenerationMethod
 from schemathesis.checks import not_a_server_error, response_headers_conformance, content_type_conformance, response_schema_conformance
 from hypothesis import settings, Phase, HealthCheck
-import configparser
-
+# import configparser
+import yaml
 
 # load_dotenv()
 # BASE_URL = os.getenv('BASE_URL')
@@ -21,12 +21,18 @@ import configparser
 
 # schema = schemathesis.from_uri(BASE_URL, validate_schema=False)
 
-config = configparser.ConfigParser()
-config.read('config.ini')
+# config = configparser.ConfigParser()
+# config.read('config.ini')
 
-BASE_URL = config['DEFAULTS']['BASE_URL']
-ENDPOINT = config['DEFAULTS']['ENDPOINT']
-AUTH = config['DEFAULTS']['AUTH']
+# BASE_URL = config['DEFAULTS']['BASE_URL']
+# ENDPOINT = config['DEFAULTS']['ENDPOINT']
+# AUTH = config['DEFAULTS']['AUTH']
+with open('config.yaml') as file:
+    config = yaml.full_load(file)
+
+BASE_URL = config['BASE_URL']
+ENDPOINT = config['ENDPOINT']
+AUTH = config['AUTH']
 
 schema_negative =  schemathesis.from_uri(BASE_URL, validate_schema=False, data_generation_methods=[DataGenerationMethod.negative])
 
