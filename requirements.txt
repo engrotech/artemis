@@ -6,3 +6,4 @@ configparser
 requests
 pytest
 pytest-parallel
+pytest-html

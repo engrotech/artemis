@@ -1,25 +1,26 @@
 
-# from contextlib import suppress
-# import os
+from distutils.command.config import config
+import os
 # from dotenv import load_dotenv
 import schemathesis
-# import json
-# import requests
+import json
+import requests
+import configparser
 
-# from unittest import TestCase
+from unittest import TestCase
 
 from schemathesis import DataGenerationMethod
 from schemathesis.checks import not_a_server_error, response_headers_conformance, content_type_conformance, response_schema_conformance
 from hypothesis import settings, Phase, HealthCheck
-# import configparser
 import yaml
 
 # load_dotenv()
 # BASE_URL = os.getenv('BASE_URL')
 # ENDPOINT = os.getenv('ENDPOINT')
 # AUTH = os.getenv('AUTH')
+# @settings(max_examples=1000)
 
-# schema = schemathesis.from_uri(BASE_URL, validate_schema=False)
+
 
 # config = configparser.ConfigParser()
 # config.read('config.ini')
@@ -27,18 +28,18 @@ import yaml
 # BASE_URL = config['DEFAULTS']['BASE_URL']
 # ENDPOINT = config['DEFAULTS']['ENDPOINT']
 # AUTH = config['DEFAULTS']['AUTH']
-with open('config.yaml') as file:
+with open('src/config.yaml') as file:
     config = yaml.full_load(file)
 
 BASE_URL = config['BASE_URL']
 ENDPOINT = config['ENDPOINT']
 AUTH = config['AUTH']
-
-schema_negative =  schemathesis.from_uri(BASE_URL, validate_schema=False, data_generation_methods=[DataGenerationMethod.negative])
+schema = schemathesis.from_uri(BASE_URL, validate_schema=False)
+# schema = schemathesis.from_path('/home/arijit/Project/API_Test/data/openapi-fast.json', base_url="http://127.0.0.1:8000")
+# schema_negative =  schemathesis.from_uri(BASE_URL, validate_schema=False, data_generation_methods=[DataGenerationMethod.negative])
 
 # , data_generation_methods=[DataGenerationMethod.negative]
 # schema = schemathesis.from_uri("https://example.schemathesis.io/openapi.json", base_url="https://example.schemathesis.io", validate_schema=False, skip_deprecated_operations=True)
-# schema = schemathesis.from_path('/home/arijit/Documents/API_Test/data/openapi-fast.json', base_url="http://127.0.0.1:8000")
 # openapi_data = open('data/openapi-fast.json', 'r')
 
 
@@ -52,7 +53,7 @@ schema_negative =  schemathesis.from_uri(BASE_URL, validate_schema=False, data_g
     # print(strategy.example())
 
 # Custom Tests
-@schema_negative.parametrize(endpoint=ENDPOINT)
+@schema.parametrize(endpoint=ENDPOINT)
 @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))
 def custom_test1(case):
     response = case.call()
