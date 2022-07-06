@@ -1,2 +1,2 @@
-pytest -v src/schema-testing.py --tb=short --workers 4 --html=reports/report.html --css=src/highcontrast.css
-pytest -v src/schema-testing-neg.py --tb=short --workers 4 --html=reports/report-neg.html --css=src/highcontrast.css
+pytest -v src/schema-testing.py --tb=short -n 4 --html=reports/report.html --css=src/highcontrast.css
+pytest -v src/schema-testing-neg.py --tb=short -n 4 --html=reports/report-neg.html --css=src/highcontrast.css

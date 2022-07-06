@@ -7,3 +7,4 @@ requests
 pytest
 pytest-parallel
 pytest-html
+pytest-xdist
