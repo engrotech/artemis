@@ -31,8 +31,8 @@ This is a Automated API Testing Framework, which automatically checks on the Ope
 ### Install the files and dependencies:
 
 `
-git clone git@github.com:engrotech/artemis.git
-cd artemis
+git clone git@github.com:engrotech/artemis.git &&
+cd artemis &&
 ./install
 `
 
