@@ -1,3 +1,4 @@
 BASE_URL: 'https://msapiqa-content.z5.com/swagger/doc.json'
 ENDPOINT: 
 AUTH: 
+COUNT: 

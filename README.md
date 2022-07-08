@@ -28,29 +28,24 @@ This is a Automated API Testing Framework, which automatically checks on the Ope
 
 ## Installation:
 
-1. Activate your Virtual Environment:
+### Install the files and dependencies:
 
-```
-
-python3 -m venv env
-source env/bin/activate
-
-```
-
-2. Install the dependencies and packages:
-
-```
-
-pip3 install -r requirements.txt
-
-```
+`
+git clone git@github.com:engrotech/artemis.git
+cd artemis
+./install
+`
 
 ## How to Run:
 
-You can directly run the run.sh file by command ./run.sh. This would create a report.html file which can be viewed for a proper 
+You can directly run by typing **artemis**. This would create a report.html file which can be viewed for a proper 
 HTML Report of your complete test run. 
 
-Incase, it asks for permission try running with administrator rights: `sudo chmod +x run.sh`
+Incase, it says artemis not found you can set the path by:
+
+`
+export PATH=$PATH:$PWD/bin
+`
 
 ## Commands and How it Works
 
@@ -89,6 +84,13 @@ uvicorn main:app --reload
 Once the server is up, you can follow the How to Run steps. Check report.html and report-neg.html for Positive Property Based Test Case and 
 Negative Property Based Test Cases respectively.
 
+### Example Demos:
+
+![artemis1](images/1.png)
+![artemis5](images/2.png)
+![artemis4](images/3.png)
+![artemis3](images/4.png)
+![artemis2](images/5.png)
 
 ## How are responses checked?
 
