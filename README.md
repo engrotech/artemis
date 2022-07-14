@@ -71,6 +71,10 @@ Currently, For Authentication you ll have to manually generate the token and hav
 
 **tee filename.log**: Generate the log file
 
+
+### Artemis and AWS APIs:
+For AWS APIs testing, remember to add appropriate `HTTP Error Codes`
+
 **-v**: Verbose mode -- Provides details on the plugins used.
 
 ### Example App:
