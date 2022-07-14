@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 28-Jun-2022 at 11:09:41 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 14-Jul-2022 at 17:42:46 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -251,16 +251,16 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>{"pluggy": "1.0.0", "py": "1.11.0", "pytest": "7.1.2"}</td></tr>
       <tr>
         <td>Platform</td>
-        <td>Linux-5.13.0-44-generic-x86_64-with-glibc2.29</td></tr>
+        <td>Linux-5.15.0-41-generic-x86_64-with-glibc2.17</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"anyio": "3.5.0", "html": "3.1.1", "hypothesis": "6.46.2", "metadata": "2.0.1", "parallel": "0.1.1", "schemathesis": "3.15.1", "subtests": "0.7.0"}</td></tr>
+        <td>{"anyio": "3.5.0", "dash": "1.19.0", "html": "3.1.1", "hypothesis": "6.48.1", "metadata": "2.0.1", "parallel": "0.1.1", "schemathesis": "3.15.6", "subtests": "0.7.0"}</td></tr>
       <tr>
         <td>Python</td>
-        <td>3.8.10</td></tr></table>
+        <td>3.8.13</td></tr></table>
     <h2>Summary</h2>
-    <p>4 tests ran in 11.05 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">4 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>51 tests ran in 316.39 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">42 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">9 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -271,39 +271,463 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/contents/multitier/{result}][P]</td>
+          <td class="col-duration">0.18</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_contents_multitier__result___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:167: in formatted_path<br/>    return self.path.format(**self.path_parameters or {})<br/><span class="error">E   KeyError: &#x27;result&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/>src/schema-testing.py:57: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing.py:59: in custom_test1<br/>    response = case.call()<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:335: in call<br/>    data = self.as_requests_kwargs(base_url, headers)<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:304: in as_requests_kwargs<br/>    formatted_path = self.formatted_path.lstrip(&quot;/&quot;)  # pragma: no mutate<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:172: in formatted_path<br/>    raise InvalidSchema(f&quot;Path parameter {exc} is not defined&quot;) from exc<br/><span class="error">E   InvalidSchema: Path parameter &#x27;result&#x27; is not defined</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/contents/onetier/draft/{id}][P]</td>
+          <td class="col-duration">69.42</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">src/schema-testing.py:57: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/><span class="error">E   hypothesis.errors.FailedHealthCheck: Examples routinely exceeded the max allowable size. (20 examples overran while generating 9 valid ones). Generating examples this large will usually lead to bad results. You could try setting max_size parameters on your collections and turning max_leaves down on recursive() calls.</span><br/><span class="error">E   See https://hypothesis.readthedocs.io/en/latest/healthchecks.html for more information about this. If you want to disable just this health check, add HealthCheck.data_too_large to the suppress_health_check settings for this test.</span><br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(124606056739932955655315982516329281022) to this test or run pytest with --hypothesis-seed=124606056739932955655315982516329281022 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[DELETE /api/contents/{value}/{id}][P]</td>
+          <td class="col-duration">0.75</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_DELETE__api_contents__value___id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:167: in formatted_path<br/>    return self.path.format(**self.path_parameters or {})<br/><span class="error">E   KeyError: &#x27;value&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/>src/schema-testing.py:57: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing.py:59: in custom_test1<br/>    response = case.call()<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:335: in call<br/>    data = self.as_requests_kwargs(base_url, headers)<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:304: in as_requests_kwargs<br/>    formatted_path = self.formatted_path.lstrip(&quot;/&quot;)  # pragma: no mutate<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:172: in formatted_path<br/>    raise InvalidSchema(f&quot;Path parameter {exc} is not defined&quot;) from exc<br/><span class="error">E   InvalidSchema: Path parameter &#x27;value&#x27; is not defined</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/dashboard][P]</td>
+          <td class="col-duration">6.06</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_dashboard__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">src/schema-testing.py:57: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing.py:60: in custom_test1<br/>    case.validate_response(response, checks=(not_a_server_error, response_headers_conformance, response_schema_conformance))<br/><span class="error">E   schemathesis.exceptions.CheckFailed: </span><br/><span class="error">E   </span><br/><span class="error">E   1. The received response does not conform to the defined schema!</span><br/><span class="error">E   </span><br/><span class="error">E   Details: </span><br/><span class="error">E   </span><br/><span class="error">E   {&#x27;Dashboard&#x27;: {&#x27;WatchedContent&#x27;: [{&#x27;contentTitle&#x27;: &#x27;liveTV_2june&#x27;, &#x27;watchedCount&#x27;: 1}], &#x27;UserDevicesresponse&#x27;: [{&#x27;lable&#x27;: &#x27;android&#x27;, &#x27;value&#x27;: 411992}, {&#x27;lable&#x27;: &#x27;ios&#x27;, &#x27;value&#x27;: 40262}, {&#x27;lable&#x27;: &#x27;roku&#x27;, &#x27;value&#x27;: 21}, {&#x27;lable&#x27;: &#x27;smart_tv&#x27;, &#x27;value&#x27;: 61735}], &#x27;UserByRegion&#x27;: [{&#x27;regionName&#x27;: &#x27;Afghanistan&#x27;, &#x27;userCount&#x27;: 8}, {&#x27;regionName&#x27;: &#x27;Algeria&#x27;, &#x27;userCount&#x27;: 4}, {&#x27;regionName&#x27;: &#x27;Azerbaijan&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Australia&#x27;, &#x27;userCount&#x27;: 3}, {&#x27;regionName&#x27;: &#x27;Austria&#x27;, &#x27;userCount&#x27;: 3}, {&#x27;regionName&#x27;: &#x27;Bahamas&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Bahrain&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Canada&#x27;, &#x27;userCount&#x27;: 5}, {&#x27;regionName&#x27;: &#x27;Denmark&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Eritrea&#x27;, &#x27;userCount&#x27;: 2}, {&#x27;regionName&#x27;: &#x27;France&#x27;, &#x27;userCount&#x27;: 6}, {&#x27;regionName&#x27;: &#x27;Palestine&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Germany&#x27;, &#x27;userCount&#x27;: 4}, {&#x27;regionName&#x27;: &#x27;Haiti&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;India&#x27;, &#x27;userCount&#x27;: 15}, {&#x27;regionName&#x27;: &#x27;Iraq&#x27;, &#x27;userCount&#x27;: 3}, {&#x27;regionName&#x27;: &#x27;Israel&#x27;, &#x27;userCount&#x27;: 2}, {&#x27;regionName&#x27;: &#x27;Jordan&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Kuwait&#x27;, &#x27;userCount&#x27;: 5}, {&#x27;regionName&#x27;: &#x27;Lebanon&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Mali&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Morocco&#x27;, &#x27;userCount&#x27;: 2}, {&#x27;regionName&#x27;: &#x27;Oman&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Netherlands&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Norway&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Qatar&#x27;, &#x27;userCount&#x27;: 2}, {&#x27;regionName&#x27;: &#x27;Saudi Arabia&#x27;, &#x27;userCount&#x27;: 115}, {&#x27;regionName&#x27;: &#x27;Somalia&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Zimbabwe&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Spain&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;Sweden&#x27;, &#x27;userCount&#x27;: 6}, {&#x27;regionName&#x27;: &#x27;Syrian Arab Republic&#x27;, &#x27;userCount&#x27;: 1}, {&#x27;regionName&#x27;: &#x27;United Arab Emirates&#x27;, &#x27;userCount&#x27;: 10}, {&#x27;regionName&#x27;: &#x27;Turkey&#x27;, &#x27;userCount&#x27;: 3}, {&#x27;regionName&#x27;: &#x27;Egypt&#x27;, &#x27;userCount&#x27;: 6}, {&#x27;regionName&#x27;: &#x27;United Kingdom&#x27;, &#x27;userCount&#x27;: 39}, {&#x27;regionName&#x27;: &#x27;United States of America&#x27;, &#x27;userCount&#x27;: 22}, {&#x27;regionName&#x27;: &#x27;Yemen&#x27;, &#x27;userCount&#x27;: 2}], &#x27;ActiveUsers&#x27;: {&#x27;activeUserCount&#x27;: &#x27;186876&#x27;}}} is not of type &#x27;array&#x27;</span><br/><span class="error">E   </span><br/><span class="error">E   Failed validating &#x27;type&#x27; in schema:</span><br/><span class="error">E       {&#x27;items&#x27;: {&#x27;$ref&#x27;: &#x27;#/definitions/dashboard.Dashboard&#x27;},</span><br/><span class="error">E        &#x27;type&#x27;: &#x27;array&#x27;}</span><br/><span class="error">E   </span><br/><span class="error">E   On instance:</span><br/><span class="error">E       {&#x27;Dashboard&#x27;: {&#x27;ActiveUsers&#x27;: {&#x27;activeUserCount&#x27;: &#x27;186876&#x27;},</span><br/><span class="error">E                      &#x27;UserByRegion&#x27;: [{&#x27;regionName&#x27;: &#x27;Afghanistan&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 8},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Algeria&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 4},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Azerbaijan&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Australia&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 3},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Austria&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 3},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Bahamas&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Bahrain&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Canada&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 5},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Denmark&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Eritrea&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 2},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;France&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 6},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Palestine&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Germany&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 4},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Haiti&#x27;, &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;India&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 15},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Iraq&#x27;, &#x27;userCount&#x27;: 3},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Israel&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 2},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Jordan&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Kuwait&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 5},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Lebanon&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Mali&#x27;, &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Morocco&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 2},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Oman&#x27;, &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Netherlands&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Norway&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Qatar&#x27;, &#x27;userCount&#x27;: 2},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Saudi Arabia&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 115},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Somalia&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Zimbabwe&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Spain&#x27;, &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Sweden&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 6},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Syrian Arab Republic&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 1},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;United Arab Emirates&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 10},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Turkey&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 3},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Egypt&#x27;, &#x27;userCount&#x27;: 6},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;United Kingdom&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 39},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;United States of &#x27;</span><br/><span class="error">E                                                      &#x27;America&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 22},</span><br/><span class="error">E                                       {&#x27;regionName&#x27;: &#x27;Yemen&#x27;,</span><br/><span class="error">E                                        &#x27;userCount&#x27;: 2}],</span><br/><span class="error">E                      &#x27;UserDevicesresponse&#x27;: [{&#x27;lable&#x27;: &#x27;android&#x27;,</span><br/><span class="error">E                                               &#x27;value&#x27;: 411992},</span><br/><span class="error">E                                              {&#x27;lable&#x27;: &#x27;ios&#x27;, &#x27;value&#x27;: 40262},</span><br/><span class="error">E                                              {&#x27;lable&#x27;: &#x27;roku&#x27;, &#x27;value&#x27;: 21},</span><br/><span class="error">E                                              {&#x27;lable&#x27;: &#x27;smart_tv&#x27;,</span><br/><span class="error">E                                               &#x27;value&#x27;: 61735}],</span><br/><span class="error">E                      &#x27;WatchedContent&#x27;: [{&#x27;contentTitle&#x27;: &#x27;liveTV_2june&#x27;,</span><br/><span class="error">E                                          &#x27;watchedCount&#x27;: 1}]}}</span><br/><span class="error">E   </span><br/><span class="error">E   ----------</span><br/><span class="error">E   </span><br/><span class="error">E   Response status: 200</span><br/><span class="error">E   Response payload: `{&quot;Dashboard&quot;:{&quot;WatchedContent&quot;:[{&quot;contentTitle&quot;:&quot;liveTV_2june&quot;,&quot;watchedCount&quot;:1}],&quot;UserDevicesresponse&quot;:[{&quot;lable&quot;:&quot;android&quot;,&quot;value&quot;:411992},{&quot;lable&quot;:&quot;ios&quot;,&quot;value&quot;:40262},{&quot;lable&quot;:&quot;roku&quot;,&quot;value&quot;:21},{&quot;lable&quot;:&quot;smart_tv&quot;,&quot;value&quot;:61735}],&quot;UserByRegion&quot;:[{&quot;regionName&quot;:&quot;Afghanistan&quot;,&quot;userCount&quot;:8},{&quot;regionName&quot;:&quot;Algeria&quot;,&quot;userCount&quot;:4},{&quot;regionName&quot;:&quot;Azerbaijan&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Australia&quot;,&quot;userCount&quot;:3},{&quot;regionName&quot;:&quot;Austria&quot;,&quot;userCount&quot;:3},{&quot;regionName&quot;:&quot;Bahamas&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Bahrain&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Canada&quot;,&quot;userCount&quot;:5},{&quot;regionName&quot;:&quot;Denmark&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Eritrea&quot;,&quot;userCount&quot;:2},{&quot;regionName&quot;:&quot;France&quot;,&quot;userCount&quot;:6},{&quot;regionName&quot;:&quot;Palestine&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Germany&quot;,&quot;userCount&quot;:4},{&quot;regionName&quot;:&quot;Haiti&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;India&quot;,&quot;userCount&quot;:15},{&quot;regionName&quot;:&quot;Iraq&quot;,&quot;userCount&quot;:3},{&quot;regionName&quot;:&quot;Israel&quot;,&quot;userCount&quot;:2},{&quot;regionName&quot;:&quot;Jordan&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Kuwait&quot;,&quot;userCount&quot;:5},{&quot;regionName&quot;:&quot;Lebanon&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Mali&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Morocco&quot;,&quot;userCount&quot;:2},{&quot;regionName&quot;:&quot;Oman&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Netherlands&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Norway&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Qatar&quot;,&quot;userCount&quot;:2},{&quot;regionName&quot;:&quot;Saudi Arabia&quot;,&quot;userCount&quot;:115},{&quot;regionName&quot;:&quot;Somalia&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Zimbabwe&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Spain&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;Sweden&quot;,&quot;userCount&quot;:6},{&quot;regionName&quot;:&quot;Syrian Arab Republic&quot;,&quot;userCount&quot;:1},{&quot;regionName&quot;:&quot;United Arab Emirates&quot;,&quot;userCount&quot;:10},{&quot;regionName&quot;:&quot;Turkey&quot;,&quot;userCount&quot;:3},{&quot;regionName&quot;:&quot;Egypt&quot;,&quot;userCount&quot;:6},{&quot;regionName&quot;:&quot;United Kingdom&quot;,&quot;userCount&quot;:39},{&quot;regionName&quot;:&quot;United States of America&quot;,&quot;userCount&quot;:22},{&quot;regionName&quot;:&quot;Yemen&quot;,&quot;userCount&quot;:2}],&quot;ActiveUsers&quot;:{&quot;activeUserCount&quot;:&quot;186876&quot;}}}`</span><br/><span class="error">E   </span><br/><span class="error">E   Run this cURL command to reproduce this response: </span><br/><span class="error">E   </span><br/><span class="error">E       curl -X GET -H &#x27;Accept: */*&#x27; -H &#x27;Accept-Encoding: gzip, deflate, br&#x27; -H &#x27;Connection: keep-alive&#x27; -H &#x27;User-Agent: schemathesis/3.15.6&#x27; -H &#x27;X-Schemathesis-TestCaseId: 58e661dbb8ea4eb1bf2448986c00a933&#x27; https://msapiqa-content.z5.com/api/dashboard</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/genre/{genre_id}][P]</td>
+          <td class="col-duration">0.35</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_genre__genre_id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:167: in formatted_path<br/>    return self.path.format(**self.path_parameters or {})<br/><span class="error">E   KeyError: &#x27;genre_id&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/>src/schema-testing.py:57: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing.py:59: in custom_test1<br/>    response = case.call()<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:335: in call<br/>    data = self.as_requests_kwargs(base_url, headers)<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:304: in as_requests_kwargs<br/>    formatted_path = self.formatted_path.lstrip(&quot;/&quot;)  # pragma: no mutate<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:172: in formatted_path<br/>    raise InvalidSchema(f&quot;Path parameter {exc} is not defined&quot;) from exc<br/><span class="error">E   InvalidSchema: Path parameter &#x27;genre_id&#x27; is not defined</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/genres/{genre_id}/subgenres][P]</td>
+          <td class="col-duration">0.48</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_genres__genre_id__subgenres__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:167: in formatted_path<br/>    return self.path.format(**self.path_parameters or {})<br/><span class="error">E   KeyError: &#x27;genre_id&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/>src/schema-testing.py:57: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing.py:59: in custom_test1<br/>    response = case.call()<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:335: in call<br/>    data = self.as_requests_kwargs(base_url, headers)<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:304: in as_requests_kwargs<br/>    formatted_path = self.formatted_path.lstrip(&quot;/&quot;)  # pragma: no mutate<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:172: in formatted_path<br/>    raise InvalidSchema(f&quot;Path parameter {exc} is not defined&quot;) from exc<br/><span class="error">E   InvalidSchema: Path parameter &#x27;genre_id&#x27; is not defined</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/shows][P]</td>
+          <td class="col-duration">0.81</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_shows__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">src/schema-testing.py:57: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing.py:60: in custom_test1<br/>    case.validate_response(response, checks=(not_a_server_error, response_headers_conformance, response_schema_conformance))<br/><span class="error">E   schemathesis.exceptions.CheckFailed: </span><br/><span class="error">E   </span><br/><span class="error">E   1. The received response does not conform to the defined schema!</span><br/><span class="error">E   </span><br/><span class="error">E   Details: </span><br/><span class="error">E   </span><br/><span class="error">E   {&#x27;keys&#x27;: None} is not of type &#x27;array&#x27;</span><br/><span class="error">E   </span><br/><span class="error">E   Failed validating &#x27;type&#x27; in schema:</span><br/><span class="error">E       {&#x27;items&#x27;: {&#x27;$ref&#x27;: &#x27;#/definitions/dashboard.Content&#x27;}, &#x27;type&#x27;: &#x27;array&#x27;}</span><br/><span class="error">E   </span><br/><span class="error">E   On instance:</span><br/><span class="error">E       {&#x27;keys&#x27;: None}</span><br/><span class="error">E   </span><br/><span class="error">E   ----------</span><br/><span class="error">E   </span><br/><span class="error">E   Response status: 200</span><br/><span class="error">E   Response payload: `{&quot;keys&quot;:null}`</span><br/><span class="error">E   </span><br/><span class="error">E   Run this cURL command to reproduce this response: </span><br/><span class="error">E   </span><br/><span class="error">E       curl -X GET -H &#x27;Accept: */*&#x27; -H &#x27;Accept-Encoding: gzip, deflate, br&#x27; -H &#x27;Connection: keep-alive&#x27; -H &#x27;User-Agent: schemathesis/3.15.6&#x27; -H &#x27;X-Schemathesis-TestCaseId: 882c8079042a401c90907e4a33d9a7ae&#x27; https://msapiqa-content.z5.com/api/shows</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/viewactivities/filters][P]</td>
+          <td class="col-duration">0.37</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_viewactivities_filters__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">src/schema-testing.py:57: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing.py:60: in custom_test1<br/>    case.validate_response(response, checks=(not_a_server_error, response_headers_conformance, response_schema_conformance))<br/><span class="error">E   schemathesis.exceptions.CheckFailed: </span><br/><span class="error">E   </span><br/><span class="error">E   1. The received response does not conform to the defined schema!</span><br/><span class="error">E   </span><br/><span class="error">E   Details: </span><br/><span class="error">E   </span><br/><span class="error">E   {&#x27;contentTypes&#x27;: [&#x27;Movie&#x27;, &#x27;Episode&#x27;]} is not of type &#x27;array&#x27;</span><br/><span class="error">E   </span><br/><span class="error">E   Failed validating &#x27;type&#x27; in schema:</span><br/><span class="error">E       {&#x27;items&#x27;: {&#x27;type&#x27;: &#x27;object&#x27;}, &#x27;type&#x27;: &#x27;array&#x27;}</span><br/><span class="error">E   </span><br/><span class="error">E   On instance:</span><br/><span class="error">E       {&#x27;contentTypes&#x27;: [&#x27;Movie&#x27;, &#x27;Episode&#x27;]}</span><br/><span class="error">E   </span><br/><span class="error">E   ----------</span><br/><span class="error">E   </span><br/><span class="error">E   Response status: 200</span><br/><span class="error">E   Response payload: `{&quot;contentTypes&quot;:[&quot;Movie&quot;,&quot;Episode&quot;]}`</span><br/><span class="error">E   </span><br/><span class="error">E   Run this cURL command to reproduce this response: </span><br/><span class="error">E   </span><br/><span class="error">E       curl -X GET -H &#x27;Accept: */*&#x27; -H &#x27;Accept-Encoding: gzip, deflate, br&#x27; -H &#x27;Connection: keep-alive&#x27; -H &#x27;User-Agent: schemathesis/3.15.6&#x27; -H &#x27;X-Schemathesis-TestCaseId: 4efe8affec894d00843417d7fc343ef1&#x27; https://msapiqa-content.z5.com/api/viewactivities/filters</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[DELETE /api/{value}/{id}][P]</td>
+          <td class="col-duration">0.21</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_DELETE__api__value___id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:167: in formatted_path<br/>    return self.path.format(**self.path_parameters or {})<br/><span class="error">E   KeyError: &#x27;value&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/>src/schema-testing.py:57: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing.py:59: in custom_test1<br/>    response = case.call()<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:335: in call<br/>    data = self.as_requests_kwargs(base_url, headers)<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:304: in as_requests_kwargs<br/>    formatted_path = self.formatted_path.lstrip(&quot;/&quot;)  # pragma: no mutate<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:172: in formatted_path<br/>    raise InvalidSchema(f&quot;Path parameter {exc} is not defined&quot;) from exc<br/><span class="error">E   InvalidSchema: Path parameter &#x27;value&#x27; is not defined</span><br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">schema-testing.py::custom_test1[POST /add][P]</td>
-          <td class="col-duration">10.96</td>
-          <td class="col-links"><a class="text" href="assets/schema_testing.py__custom_test1_POST__add__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/Actors][P]</td>
+          <td class="col-duration">0.16</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_Actors__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="empty log">No log output captured.</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">schema-testing.py::custom_test1[GET /people][P]</td>
-          <td class="col-duration">7.49</td>
-          <td class="col-links"><a class="text" href="assets/schema_testing.py__custom_test1_GET__people__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+          <td class="col-name">src/schema-testing.py::custom_test1[PUT /api/actors][P]</td>
+          <td class="col-duration">20.14</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_PUT__api_actors__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="empty log">No log output captured.</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">schema-testing.py::custom_test1[GET /][P]</td>
-          <td class="col-duration">6.02</td>
-          <td class="col-links"><a class="text" href="assets/schema_testing.py__custom_test1_GET____P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/agegroups][P]</td>
+          <td class="col-duration">0.17</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_agegroups__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="empty log">No log output captured.</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">schema-testing.py::custom_test1[GET /items/{item_id}][P]</td>
-          <td class="col-duration">2.78</td>
-          <td class="col-links"><a class="text" href="assets/schema_testing.py__custom_test1_GET__items__item_id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/content/digitalrights/regions/all][P]</td>
+          <td class="col-duration">0.16</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_content_digitalrights_regions_all__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/content/digitalrights/types][P]</td>
+          <td class="col-duration">0.16</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_content_digitalrights_types__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/content/displaystatuses][P]</td>
+          <td class="col-duration">0.19</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_content_displaystatuses__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/content/productnames][P]</td>
+          <td class="col-duration">0.15</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_content_productnames__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/contents][P]</td>
+          <td class="col-duration">18.00</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_contents__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/contents/multitier/published][P]</td>
+          <td class="col-duration">32.39</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_contents_multitier_published__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/contents/multitier/titles][P]</td>
+          <td class="col-duration">0.18</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_contents_multitier_titles__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/contents/multitier/{id}/status/{status}][P]</td>
+          <td class="col-duration">19.41</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_contents_multitier__id__status__status___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/contents/multitier/{result}/{id}][P]</td>
+          <td class="col-duration">40.73</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_contents_multitier__result___id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/contents/onetier/published][P]</td>
+          <td class="col-duration">219.36</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_contents_onetier_published__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/contents/onetier/published/{id}][P]</td>
+          <td class="col-duration">200.17</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_contents_onetier_published__id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/contents/onetier/{id}][P]</td>
+          <td class="col-duration">24.44</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_contents_onetier__id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/contents/onetier/{id}/status/{status}][P]</td>
+          <td class="col-duration">21.16</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_contents_onetier__id__status__status___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[DELETE /api/contentvariances/{id}][P]</td>
+          <td class="col-duration">19.90</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_DELETE__api_contentvariances__id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/contentvariances/{id}/status/{status}][P]</td>
+          <td class="col-duration">19.48</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_contentvariances__id__status__status___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/directors][P]</td>
+          <td class="col-duration">0.19</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_directors__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[PUT /api/directors][P]</td>
+          <td class="col-duration">23.63</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_PUT__api_directors__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/episodes][P]</td>
+          <td class="col-duration">29.62</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_episodes__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/episodes/draft/{id}][P]</td>
+          <td class="col-duration">46.82</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_episodes_draft__id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/episodes/published/{id}][P]</td>
+          <td class="col-duration">63.12</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_episodes_published__id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[DELETE /api/episodes/{id}][P]</td>
+          <td class="col-duration">22.60</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_DELETE__api_episodes__id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/episodes/{id}/status/{status}][P]</td>
+          <td class="col-duration">22.86</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_episodes__id__status__status___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/musiccomposers][P]</td>
+          <td class="col-duration">0.43</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_musiccomposers__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[PUT /api/musiccomposers][P]</td>
+          <td class="col-duration">23.29</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_PUT__api_musiccomposers__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/seasons][P]</td>
+          <td class="col-duration">19.70</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_seasons__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/seasons/draft/{id}][P]</td>
+          <td class="col-duration">36.52</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_seasons_draft__id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/seasons/published/{id}][P]</td>
+          <td class="col-duration">67.15</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_seasons_published__id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/seasons/{id}/status/{status}][P]</td>
+          <td class="col-duration">19.87</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_seasons__id__status__status___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/singers][P]</td>
+          <td class="col-duration">0.19</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_singers__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[PUT /api/singers][P]</td>
+          <td class="col-duration">24.50</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_PUT__api_singers__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/songwriters][P]</td>
+          <td class="col-duration">0.19</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_songwriters__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[PUT /api/songwriters][P]</td>
+          <td class="col-duration">29.47</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_PUT__api_songwriters__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/subscription/plan][P]</td>
+          <td class="col-duration">0.16</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_subscription_plan__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/textualdatatags][P]</td>
+          <td class="col-duration">0.20</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_textualdatatags__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /api/textualdatatags][P]</td>
+          <td class="col-duration">28.00</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__api_textualdatatags__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /api/writers][P]</td>
+          <td class="col-duration">0.20</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__api_writers__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[PUT /api/writers][P]</td>
+          <td class="col-duration">27.19</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_PUT__api_writers__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /genres][P]</td>
+          <td class="col-duration">0.18</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__genres__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing.py::custom_test1[POST /seasons/{id}/digitalrightstype/{status}][P]</td>
+          <td class="col-duration">23.75</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_POST__seasons__id__digitalrightstype__status___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>

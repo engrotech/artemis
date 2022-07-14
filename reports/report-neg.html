@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report-neg.html</h1>
-    <p>Report generated on 28-Jun-2022 at 11:10:02 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 14-Jul-2022 at 17:35:02 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -251,16 +251,16 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>{"pluggy": "1.0.0", "py": "1.11.0", "pytest": "7.1.2"}</td></tr>
       <tr>
         <td>Platform</td>
-        <td>Linux-5.13.0-44-generic-x86_64-with-glibc2.29</td></tr>
+        <td>Linux-5.15.0-41-generic-x86_64-with-glibc2.17</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"anyio": "3.5.0", "html": "3.1.1", "hypothesis": "6.46.2", "metadata": "2.0.1", "parallel": "0.1.1", "schemathesis": "3.15.1", "subtests": "0.7.0"}</td></tr>
+        <td>{"anyio": "3.5.0", "dash": "1.19.0", "html": "3.1.1", "hypothesis": "6.48.1", "metadata": "2.0.1", "parallel": "0.1.1", "schemathesis": "3.15.6", "subtests": "0.7.0"}</td></tr>
       <tr>
         <td>Python</td>
-        <td>3.8.10</td></tr></table>
+        <td>3.8.13</td></tr></table>
     <h2>Summary</h2>
-    <p>4 tests ran in 19.52 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>34 tests ran in 372.39 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">28 passed</span>, <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">17 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">6 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -274,37 +274,476 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
-          <td class="col-name">schema-testing-neg.py::custom_test1[GET /items/{item_id}][N]</td>
-          <td class="col-duration">19.42</td>
-          <td class="col-links"><a class="text" href="assets/schema_testing_neg.py__custom_test1_GET__items__item_id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/contents/multitier/{result}][N]</td>
+          <td class="col-duration">0.41</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_GET__api_contents_multitier__result___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">schema-testing-neg.py:56: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/><span class="error">E   hypothesis.errors.Unsatisfiable: Unable to satisfy assumptions of custom_test1</span><br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(123499043690395747451147504777331546880) to this test or run pytest with --hypothesis-seed=123499043690395747451147504777331546880 to reproduce this failure.
+            <div class="log">../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:167: in formatted_path<br/>    return self.path.format(**self.path_parameters or {})<br/><span class="error">E   KeyError: &#x27;result&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/>src/schema-testing-neg.py:56: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing-neg.py:58: in custom_test1<br/>    response = case.call()<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:335: in call<br/>    data = self.as_requests_kwargs(base_url, headers)<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:304: in as_requests_kwargs<br/>    formatted_path = self.formatted_path.lstrip(&quot;/&quot;)  # pragma: no mutate<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:172: in formatted_path<br/>    raise InvalidSchema(f&quot;Path parameter {exc} is not defined&quot;) from exc<br/><span class="error">E   InvalidSchema: Path parameter &#x27;result&#x27; is not defined</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[DELETE /api/contents/{value}/{id}][N]</td>
+          <td class="col-duration">0.44</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_DELETE__api_contents__value___id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:167: in formatted_path<br/>    return self.path.format(**self.path_parameters or {})<br/><span class="error">E   KeyError: &#x27;value&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/>src/schema-testing-neg.py:56: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing-neg.py:58: in custom_test1<br/>    response = case.call()<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:335: in call<br/>    data = self.as_requests_kwargs(base_url, headers)<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:304: in as_requests_kwargs<br/>    formatted_path = self.formatted_path.lstrip(&quot;/&quot;)  # pragma: no mutate<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:172: in formatted_path<br/>    raise InvalidSchema(f&quot;Path parameter {exc} is not defined&quot;) from exc<br/><span class="error">E   InvalidSchema: Path parameter &#x27;value&#x27; is not defined</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/genre/{genre_id}][N]</td>
+          <td class="col-duration">0.28</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_GET__api_genre__genre_id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:167: in formatted_path<br/>    return self.path.format(**self.path_parameters or {})<br/><span class="error">E   KeyError: &#x27;genre_id&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/>src/schema-testing-neg.py:56: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing-neg.py:58: in custom_test1<br/>    response = case.call()<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:335: in call<br/>    data = self.as_requests_kwargs(base_url, headers)<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:304: in as_requests_kwargs<br/>    formatted_path = self.formatted_path.lstrip(&quot;/&quot;)  # pragma: no mutate<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:172: in formatted_path<br/>    raise InvalidSchema(f&quot;Path parameter {exc} is not defined&quot;) from exc<br/><span class="error">E   InvalidSchema: Path parameter &#x27;genre_id&#x27; is not defined</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/genres/{genre_id}/subgenres][N]</td>
+          <td class="col-duration">0.51</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_GET__api_genres__genre_id__subgenres__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:167: in formatted_path<br/>    return self.path.format(**self.path_parameters or {})<br/><span class="error">E   KeyError: &#x27;genre_id&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/>src/schema-testing-neg.py:56: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing-neg.py:58: in custom_test1<br/>    response = case.call()<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:335: in call<br/>    data = self.as_requests_kwargs(base_url, headers)<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:304: in as_requests_kwargs<br/>    formatted_path = self.formatted_path.lstrip(&quot;/&quot;)  # pragma: no mutate<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:172: in formatted_path<br/>    raise InvalidSchema(f&quot;Path parameter {exc} is not defined&quot;) from exc<br/><span class="error">E   InvalidSchema: Path parameter &#x27;genre_id&#x27; is not defined</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/shows][N]</td>
+          <td class="col-duration">7.51</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_GET__api_shows__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">src/schema-testing-neg.py:56: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing-neg.py:59: in custom_test1<br/>    case.validate_response(response, checks=(not_a_server_error, response_headers_conformance, response_schema_conformance))<br/><span class="error">E   schemathesis.exceptions.CheckFailed: </span><br/><span class="error">E   </span><br/><span class="error">E   1. The received response does not conform to the defined schema!</span><br/><span class="error">E   </span><br/><span class="error">E   Details: </span><br/><span class="error">E   </span><br/><span class="error">E   {&#x27;keys&#x27;: None} is not of type &#x27;array&#x27;</span><br/><span class="error">E   </span><br/><span class="error">E   Failed validating &#x27;type&#x27; in schema:</span><br/><span class="error">E       {&#x27;items&#x27;: {&#x27;$ref&#x27;: &#x27;#/definitions/dashboard.Content&#x27;}, &#x27;type&#x27;: &#x27;array&#x27;}</span><br/><span class="error">E   </span><br/><span class="error">E   On instance:</span><br/><span class="error">E       {&#x27;keys&#x27;: None}</span><br/><span class="error">E   </span><br/><span class="error">E   ----------</span><br/><span class="error">E   </span><br/><span class="error">E   Response status: 200</span><br/><span class="error">E   Response payload: `{&quot;keys&quot;:null}`</span><br/><span class="error">E   </span><br/><span class="error">E   Run this cURL command to reproduce this response: </span><br/><span class="error">E   </span><br/><span class="error">E       curl -X GET -H &#x27;Accept: */*&#x27; -H &#x27;Accept-Encoding: gzip, deflate, br&#x27; -H &#x27;Connection: keep-alive&#x27; -H &#x27;User-Agent: schemathesis/3.15.6&#x27; -H &#x27;X-Schemathesis-TestCaseId: 6cd460a428c94a58a571a2fac5d2615c&#x27; &#x27;https://msapiqa-content.z5.com/api/shows?limit=false&#x27;</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[DELETE /api/{value}/{id}][N]</td>
+          <td class="col-duration">0.31</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_DELETE__api__value___id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:167: in formatted_path<br/>    return self.path.format(**self.path_parameters or {})<br/><span class="error">E   KeyError: &#x27;value&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/>src/schema-testing-neg.py:56: in custom_test1<br/>    @settings(suppress_health_check=(HealthCheck.too_slow,HealthCheck.filter_too_much,))<br/>src/schema-testing-neg.py:58: in custom_test1<br/>    response = case.call()<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:335: in call<br/>    data = self.as_requests_kwargs(base_url, headers)<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:304: in as_requests_kwargs<br/>    formatted_path = self.formatted_path.lstrip(&quot;/&quot;)  # pragma: no mutate<br/>../../miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/models.py:172: in formatted_path<br/>    raise InvalidSchema(f&quot;Path parameter {exc} is not defined&quot;) from exc<br/><span class="error">E   InvalidSchema: Path parameter &#x27;value&#x27; is not defined</span><br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/Actors][N]</td>
+          <td class="col-duration">0.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/Actors`&#x27;)<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/agegroups][N]</td>
+          <td class="col-duration">0.15</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/agegroups`&#x27;)<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/content/digitalrights/regions/all][N]</td>
+          <td class="col-duration">0.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/content/digitalrights/regions/all`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(208534655827546695183026545944887637916) to this test or run pytest with --hypothesis-seed=208534655827546695183026545944887637916 to reproduce this failure.
+You can add @seed(19922995136137091404959080727137850368) to this test or run pytest with --hypothesis-seed=19922995136137091404959080727137850368 to reproduce this failure.
+You can add @seed(130303652592123255330039000677830030703) to this test or run pytest with --hypothesis-seed=130303652592123255330039000677830030703 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/content/digitalrights/types][N]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/content/digitalrights/types`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(285705322598612706250126515087911183671) to this test or run pytest with --hypothesis-seed=285705322598612706250126515087911183671 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/content/displaystatuses][N]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/content/displaystatuses`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(253147223986597244601252480358105869872) to this test or run pytest with --hypothesis-seed=253147223986597244601252480358105869872 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/content/productnames][N]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/content/productnames`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(313876721608974931963765798340135879149) to this test or run pytest with --hypothesis-seed=313876721608974931963765798340135879149 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/contents/multitier/titles][N]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/contents/multitier/titles`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(61532135724993621552240761303829638150) to this test or run pytest with --hypothesis-seed=61532135724993621552240761303829638150 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/dashboard][N]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/dashboard`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(266137147542345189531905085141470293803) to this test or run pytest with --hypothesis-seed=266137147542345189531905085141470293803 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/directors][N]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/directors`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(160922905349193706119704034053141962834) to this test or run pytest with --hypothesis-seed=160922905349193706119704034053141962834 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/musiccomposers][N]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/musiccomposers`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(90475489454516076969792638615376432289) to this test or run pytest with --hypothesis-seed=90475489454516076969792638615376432289 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/singers][N]</td>
+          <td class="col-duration">0.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/singers`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(16962376437015834891723450380972282698) to this test or run pytest with --hypothesis-seed=16962376437015834891723450380972282698 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/songwriters][N]</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/songwriters`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(250891298455597590109215225781533561370) to this test or run pytest with --hypothesis-seed=250891298455597590109215225781533561370 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/subscription/plan][N]</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/subscription/plan`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(149039285535577858046860529028526362326) to this test or run pytest with --hypothesis-seed=149039285535577858046860529028526362326 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/textualdatatags][N]</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/textualdatatags`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(201910637645147199651712316787325064748) to this test or run pytest with --hypothesis-seed=201910637645147199651712316787325064748 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/viewactivities/filters][N]</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/viewactivities/filters`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(284913096604363532438321070697350769978) to this test or run pytest with --hypothesis-seed=284913096604363532438321070697350769978 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/writers][N]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /api/writers`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(34966719195304890539606636795264077441) to this test or run pytest with --hypothesis-seed=34966719195304890539606636795264077441 to reproduce this failure.
+<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /genres][N]</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;/home/diliprajkumar/miniconda3/envs/engro/lib/python3.8/site-packages/schemathesis/extra/pytest_plugin.py&#x27;, 248, &#x27;Skipped: It is not possible to generate negative test cases for `GET /genres`&#x27;)<br/> ------------------------------Captured stdout call------------------------------ <br/>You can add @seed(300498895809391578994967949639345541046) to this test or run pytest with --hypothesis-seed=300498895809391578994967949639345541046 to reproduce this failure.
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">schema-testing-neg.py::custom_test1[POST /add][N]</td>
-          <td class="col-duration">7.30</td>
-          <td class="col-links"><a class="text" href="assets/schema_testing_neg.py__custom_test1_POST__add__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[PUT /api/actors][N]</td>
+          <td class="col-duration">32.46</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_PUT__api_actors__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="empty log">No log output captured.</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">schema-testing-neg.py::custom_test1[GET /people][N]</td>
-          <td class="col-duration">9.17</td>
-          <td class="col-links"><a class="text" href="assets/schema_testing_neg.py__custom_test1_GET__people__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/contents][N]</td>
+          <td class="col-duration">33.65</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_GET__api_contents__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="empty log">No log output captured.</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">schema-testing-neg.py::custom_test1[GET /][N]</td>
-          <td class="col-duration">9.54</td>
-          <td class="col-links"><a class="text" href="assets/schema_testing_neg.py__custom_test1_GET____N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/contents/multitier/published][N]</td>
+          <td class="col-duration">34.90</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_contents_multitier_published__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/contents/multitier/{id}/status/{status}][N]</td>
+          <td class="col-duration">28.50</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_contents_multitier__id__status__status___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/contents/multitier/{result}/{id}][N]</td>
+          <td class="col-duration">52.50</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_contents_multitier__result___id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/contents/onetier/draft/{id}][N]</td>
+          <td class="col-duration">240.18</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_contents_onetier_draft__id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/contents/onetier/published][N]</td>
+          <td class="col-duration">125.22</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_contents_onetier_published__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/contents/onetier/published/{id}][N]</td>
+          <td class="col-duration">79.65</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_contents_onetier_published__id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/contents/onetier/{id}][N]</td>
+          <td class="col-duration">25.82</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_GET__api_contents_onetier__id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/contents/onetier/{id}/status/{status}][N]</td>
+          <td class="col-duration">33.56</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_contents_onetier__id__status__status___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[DELETE /api/contentvariances/{id}][N]</td>
+          <td class="col-duration">28.51</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_DELETE__api_contentvariances__id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/contentvariances/{id}/status/{status}][N]</td>
+          <td class="col-duration">23.90</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_contentvariances__id__status__status___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[PUT /api/directors][N]</td>
+          <td class="col-duration">26.54</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_PUT__api_directors__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/episodes][N]</td>
+          <td class="col-duration">41.02</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_GET__api_episodes__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/episodes/draft/{id}][N]</td>
+          <td class="col-duration">103.55</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_episodes_draft__id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/episodes/published/{id}][N]</td>
+          <td class="col-duration">59.93</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_episodes_published__id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[DELETE /api/episodes/{id}][N]</td>
+          <td class="col-duration">25.35</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_DELETE__api_episodes__id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/episodes/{id}/status/{status}][N]</td>
+          <td class="col-duration">25.74</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_episodes__id__status__status___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[PUT /api/musiccomposers][N]</td>
+          <td class="col-duration">24.37</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_PUT__api_musiccomposers__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[GET /api/seasons][N]</td>
+          <td class="col-duration">43.74</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_GET__api_seasons__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/seasons/draft/{id}][N]</td>
+          <td class="col-duration">85.85</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_seasons_draft__id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/seasons/published/{id}][N]</td>
+          <td class="col-duration">103.19</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_seasons_published__id___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/seasons/{id}/status/{status}][N]</td>
+          <td class="col-duration">25.87</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_seasons__id__status__status___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[PUT /api/singers][N]</td>
+          <td class="col-duration">24.08</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_PUT__api_singers__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[PUT /api/songwriters][N]</td>
+          <td class="col-duration">38.51</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_PUT__api_songwriters__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /api/textualdatatags][N]</td>
+          <td class="col-duration">28.40</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__api_textualdatatags__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[PUT /api/writers][N]</td>
+          <td class="col-duration">25.20</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_PUT__api_writers__N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">src/schema-testing-neg.py::custom_test1[POST /seasons/{id}/digitalrightstype/{status}][N]</td>
+          <td class="col-duration">26.11</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing_neg.py__custom_test1_POST__seasons__id__digitalrightstype__status___N__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>

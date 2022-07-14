@@ -3,4 +3,5 @@ env/
 .env
 .hypothesis/
 reports/
+aws_credentials.json
 
