@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 28-Jun-2022 at 11:09:41 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 18-Jul-2022 at 11:17:38 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -251,16 +251,16 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>{"pluggy": "1.0.0", "py": "1.11.0", "pytest": "7.1.2"}</td></tr>
       <tr>
         <td>Platform</td>
-        <td>Linux-5.13.0-44-generic-x86_64-with-glibc2.29</td></tr>
+        <td>Linux-5.15.0-41-generic-x86_64-with-glibc2.17</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"anyio": "3.5.0", "html": "3.1.1", "hypothesis": "6.46.2", "metadata": "2.0.1", "parallel": "0.1.1", "schemathesis": "3.15.1", "subtests": "0.7.0"}</td></tr>
+        <td>{"anyio": "3.5.0", "dash": "1.19.0", "html": "3.1.1", "hypothesis": "6.48.1", "metadata": "2.0.1", "parallel": "0.1.1", "schemathesis": "3.15.6", "subtests": "0.7.0"}</td></tr>
       <tr>
         <td>Python</td>
-        <td>3.8.10</td></tr></table>
+        <td>3.8.13</td></tr></table>
     <h2>Summary</h2>
-    <p>4 tests ran in 11.05 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">4 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>2 tests ran in 1.81 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -274,36 +274,18 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">schema-testing.py::custom_test1[POST /add][P]</td>
-          <td class="col-duration">10.96</td>
-          <td class="col-links"><a class="text" href="assets/schema_testing.py__custom_test1_POST__add__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /get_s3_buckets_list][P]</td>
+          <td class="col-duration">1.68</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET__get_s3_buckets_list__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="empty log">No log output captured.</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">schema-testing.py::custom_test1[GET /people][P]</td>
-          <td class="col-duration">7.49</td>
-          <td class="col-links"><a class="text" href="assets/schema_testing.py__custom_test1_GET__people__P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">schema-testing.py::custom_test1[GET /][P]</td>
-          <td class="col-duration">6.02</td>
-          <td class="col-links"><a class="text" href="assets/schema_testing.py__custom_test1_GET____P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">schema-testing.py::custom_test1[GET /items/{item_id}][P]</td>
-          <td class="col-duration">2.78</td>
-          <td class="col-links"><a class="text" href="assets/schema_testing.py__custom_test1_GET__items__item_id___P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
+          <td class="col-name">src/schema-testing.py::custom_test1[GET /][P]</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"><a class="text" href="assets/src_schema_testing.py__custom_test1_GET____P__0_0.txt" target="_blank">Hypothesis stats</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
