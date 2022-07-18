@@ -11,8 +11,8 @@ with open('aws_credentials.json') as json_file:
     new_client_session_credentials = json.load(json_file)
 
 ec2_client = boto3.client('ec2', aws_access_key_id = new_client_session_credentials["AccessKeyId"],
-                                 aws_secret_access_key = new_client_session_credentials["SecretAccessKey"],
-                                 aws_session_token = new_client_session_credentials["SessionToken"])
+                                 aws_secret_access_key = new_client_session_credentials["SecretAccessKey"]
+                        )
 
 regions_response = ec2_client.describe_regions(AllRegions=True)
 regions_list = [item['RegionName'] for item in regions_response["Regions"]]
@@ -51,10 +51,13 @@ def list_s3_buckets(reg_name : Union[str,None]  = Query(description="Region Name
         raise HTTPException(status_code=400, detail="Not a valid AWS Region")
         
     s3_client = boto3.client('s3', region_name = reg_name, aws_access_key_id = new_client_session_credentials["AccessKeyId"],
-                                   aws_secret_access_key = new_client_session_credentials["SecretAccessKey"],
-                                   aws_session_token = new_client_session_credentials["SessionToken"])
+                                   aws_secret_access_key = new_client_session_credentials["SecretAccessKey"]
+                                   )
                                    		
     buckets_list_of_dicts = s3_client.list_buckets()['Buckets']
     buckets_list = [ bucket["Name"] for bucket in buckets_list_of_dicts ]
     return buckets_list
-
+ 
+@app.get("/")
+async def root():
+    return "Welcome to CAS - Cloud Automation Suite API Testing using Artemis"
