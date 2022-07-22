@@ -30,8 +30,8 @@ def pattern_match_check(str_input):
     else:
         return True
         
-@app.get("/get_s3_buckets_list")
-def list_s3_buckets(reg_name : Union[str,None]  = Query(description="Region Name of the selected AWS Resource",default = "ap-south-1",
+@app.get("/get_running_EC2Instances")
+def get_ec2_instances_list(reg_name : Union[str,None]  = Query(description="Region Name of the selected AWS Resource",default = "ap-south-1",
                                                         regex="(af|us|ap|ca|cn|eu|sa|me)-(central|(north|south)?(east|west)?)-\d",
                                             		    min_length= len(shortest_region_name), max_length = len(longest_region_name))) -> dict:
     """Lists all the names of the S3 buckets"""
@@ -48,14 +48,20 @@ def list_s3_buckets(reg_name : Union[str,None]  = Query(description="Region Name
     if reg_name not in regions_list:
         print(f"Region Name Input: {reg_name} is not valid")
         raise HTTPException(status_code=400, detail="Not a valid AWS Region")
-        
-    s3_client = boto3.client('s3', region_name = reg_name, aws_access_key_id = new_client_session_credentials["AccessKeyId"],
+    
+    running_ec2_instances = []
+    ec2_client = boto3.resource('ec2', region_name = reg_name, aws_access_key_id = new_client_session_credentials["AccessKeyId"],
                                    aws_secret_access_key = new_client_session_credentials["SecretAccessKey"]
                                    )
                                    		
-    buckets_list_of_dicts = s3_client.list_buckets()['Buckets']
-    buckets_list = [ bucket["Name"] for bucket in buckets_list_of_dicts ]
-    return buckets_list
+    instances = ec2_client.instances.filter()
+    for instance in instances:
+        if instance.state["Name"] == "running":
+            running_ec2_instances.append({"instance_ID" : instance.id, "instance_type" : instance.instance_type})
+            # running_ec2_instances["instance_ID"].append(instance.id)
+            # running_ec2_instances["instance_type"].append(instance.instance_type)
+            print (instance.id, instance.instance_type, reg_name)    
+    return running_ec2_instances
  
 @app.get("/")
 async def root():
