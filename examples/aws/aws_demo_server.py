@@ -34,7 +34,7 @@ def pattern_match_check(str_input):
 def get_ec2_instances_list(reg_name : Union[str,None]  = Query(description="Region Name of the selected AWS Resource",default = "ap-south-1",
                                                         regex="(af|us|ap|ca|cn|eu|sa|me)-(central|(north|south)?(east|west)?)-\d",
                                             		    min_length= len(shortest_region_name), max_length = len(longest_region_name))) -> dict:
-    """Lists all the names of the S3 buckets"""
+    """Lists all the names of the AWS EC2 instances in a specified region"""
     # Retrieve the list of existing buckets using the new credentials
     if len(reg_name) == 0 or reg_name == None:
         print(f"Region name cannot be empty")
